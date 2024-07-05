@@ -1,0 +1,10 @@
+[Unit]
+Description=Set screen brightness based on time at startup
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/set-brightness
+
+[Install]
+WantedBy=multi-user.target

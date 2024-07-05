@@ -1,0 +1,8 @@
+[Unit]
+Description=Set screen brightness to 90% for daytime
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/brightnessctl set 90%
+User=root
+

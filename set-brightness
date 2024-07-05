@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOUR=$(date +%H)
+
+if [ $HOUR -ge 6 ] && [ $HOUR -lt 18 ]; then
+  /usr/bin/brightnessctl set 90%
+else
+  /usr/bin/brightnessctl set 10%
+fi

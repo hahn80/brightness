@@ -1,0 +1,8 @@
+[Unit]
+Description=Set screen brightness to 10% for nighttime
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/brightnessctl set 10%
+User=root
+
