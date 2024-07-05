@@ -1,0 +1,2 @@
+# brightness
+Ubuntu Brightness Settings
