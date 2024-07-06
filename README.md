@@ -112,11 +112,15 @@ sudo systemctl daemon-reload
 ```
 sudo systemctl enable brightness-day.service
 sudo systemctl start brightness-day.service
+sudo systemctl enable brightness-day.timer
+sudo systemctl start brightness-day.timer
 ```
 
 ```
 sudo systemctl enable brightness-night.service
 sudo systemctl start brightness-night.service
+sudo systemctl enable brightness-night.timer
+sudo systemctl start brightness-night.timer
 ```
 
 ```
@@ -128,4 +132,5 @@ Check the logs:
 
 ```
 systemctl list-timers --all
+sudo systemctl status brightness-day.timer brightness-day.service
 ```
