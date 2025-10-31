@@ -45,7 +45,7 @@ sudo nano /etc/systemd/system/brightness-night.timer
 
 <code>
 	[Unit]
-	Description=Schedule screen brightness to 10% at 6 PM
+	Description=Schedule screen brightness to 50% at 6 PM
 
 	[Timer]
 	OnCalendar=*-*-* 18:00:00
@@ -65,7 +65,7 @@ sudo nano /etc/systemd/system/brightness-night.service
 
 	[Service]
 	Type=oneshot
-	ExecStart=/usr/bin/brightnessctl set 10%
+	ExecStart=/usr/bin/brightnessctl set 50%
 	User=root
 </code>
 
@@ -98,7 +98,7 @@ sudo nano /usr/local/bin/set-brightness
 	if [ $HOUR -ge 6 ] && [ $HOUR -lt 18 ]; then
 	  /usr/bin/brightnessctl set 90%
 	else
-	  /usr/bin/brightnessctl set 10%
+	  /usr/bin/brightnessctl set 50%
 	fi
 </code>
 
